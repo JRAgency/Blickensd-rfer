@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Sans, Archivo } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import Header from "@/components/Header";
@@ -7,15 +7,19 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import RevealObserver from "@/components/RevealObserver";
 
-const inter = Inter({
+// Fließtext — technisch, von IBM für Engineering-Kontexte gestaltet
+const body = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
-const grotesk = Space_Grotesk({
+// Headlines — kräftige, kantige Industrie-Grotesk
+const display = Archivo({
   subsets: ["latin"],
-  variable: "--font-grotesk",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-head",
   display: "swap",
 });
 
@@ -44,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={`${inter.variable} ${grotesk.variable}`}>
+    <html lang="de" className={`${body.variable} ${display.variable}`}>
       <body>
         <a
           href="#main"
