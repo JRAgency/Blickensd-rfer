@@ -62,9 +62,13 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`rounded-full px-4 py-2 text-[0.82rem] font-medium transition-colors duration-300 ${
-                  active
-                    ? "text-fg"
-                    : "text-fg-soft hover:text-fg"
+                  solid
+                    ? active
+                      ? "text-fg"
+                      : "text-fg-soft hover:text-fg"
+                    : active
+                      ? "text-white"
+                      : "text-white/75 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -76,9 +80,14 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${site.contact.phoneHref}`}
-            className="hidden items-center gap-2 text-sm font-semibold text-fg md:inline-flex"
+            className={`hidden items-center gap-2 text-sm font-semibold transition-colors duration-300 md:inline-flex ${
+              solid ? "text-fg" : "text-white"
+            }`}
           >
-            <Icon name="phone" className="h-4 w-4 text-accent-700" />
+            <Icon
+              name="phone"
+              className={`h-4 w-4 ${solid ? "text-accent-700" : "text-accent"}`}
+            />
             {site.contact.phone}
           </a>
           <Link href="/kontakt" className="btn btn-accent hidden sm:inline-flex">
