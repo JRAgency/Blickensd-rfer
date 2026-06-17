@@ -43,7 +43,7 @@ export default function UnternehmenPage() {
             <h2 className="display mt-5 text-[clamp(1.8rem,3.6vw,2.8rem)]">
               „Stahlgebäck“ – und die Faszination der exakten Form.
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-fg-soft">
+            <div className="mt-6 max-w-[60ch] space-y-4 text-base leading-relaxed text-fg-soft">
               {site.about.story.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}

@@ -10,7 +10,7 @@ export default function Footer() {
       {/* Watermark Wordmark */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-6 left-0 right-0 select-none text-center font-display text-[18vw] font-bold leading-none text-ink/[0.06]"
+        className="pointer-events-none absolute -bottom-6 left-0 right-0 select-none text-center font-display text-[clamp(4rem,18vw,15rem)] font-bold leading-none text-ink/[0.06]"
       >
         Blickensdörfer
       </div>

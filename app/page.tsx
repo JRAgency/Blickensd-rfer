@@ -273,7 +273,7 @@ export default function Home() {
             <h2 className="display mt-5 text-[clamp(2rem,4.4vw,3.2rem)]">
               {site.about.lead}
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-fg-soft">
+            <div className="mt-6 max-w-[60ch] space-y-4 text-base leading-relaxed text-fg-soft">
               <p>{site.about.story[0]}</p>
               <p>{site.about.story[1]}</p>
             </div>
