@@ -1,0 +1,12 @@
+/node_modules
+/.next
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*
+.vercel
+
+# interne Agentur-Notizen
+WEBSITE-INHALT.md
