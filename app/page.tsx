@@ -12,8 +12,8 @@ export default function Home() {
       <section className="relative isolate flex min-h-[92vh] items-end overflow-hidden bg-ink text-white">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/img/hero.jpg"
-            alt="CNC-Bearbeitung eines Präzisionsbauteils in der Werkstatt Blickensdörfer"
+            src="/img/hero-real.webp"
+            alt="CNC-Fräsbearbeitung eines Präzisionsbauteils in der Werkstatt Blickensdörfer"
             fill
             priority
             sizes="100vw"
@@ -251,8 +251,8 @@ export default function Home() {
           <div className="reveal relative">
             <div className="zoom-wrap group overflow-hidden rounded-[2rem]">
               <Image
-                src="/img/about.jpg"
-                alt="Moderne Fertigung in der Werkstatt Blickensdörfer"
+                src="/img/werkstatt-cnc.webp"
+                alt="Facharbeiter an der CNC-Drehmaschine in der Werkstatt Blickensdörfer"
                 width={900}
                 height={680}
                 className="zoom-img aspect-[4/3] w-full object-cover"

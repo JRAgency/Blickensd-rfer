@@ -19,7 +19,7 @@ export default function UnternehmenPage() {
         title="Liebe zur"
         accent="Präzision."
         sub="Eine kleine Werkstatt in Hanau – mit über 35 Jahren Erfahrung in der mechanischen Fertigung und einem Team, das jedes Teil ernst nimmt."
-        image="/img/about.jpg"
+        image="/img/werkstatt-cnc.webp"
         breadcrumb={[
           { label: "Start", href: "/" },
           { label: "Unternehmen", href: "/unternehmen" },

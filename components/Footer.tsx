@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import Icon from "./Icon";
 
@@ -19,22 +20,13 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
-              <svg
-                viewBox="0 0 64 64"
-                className="h-12 w-12"
-                fill="none"
-                stroke="#0f1410"
-                strokeWidth={3.4}
-                strokeLinecap="round"
-              >
-                <circle cx="32" cy="32" r="9.5" />
-                <path d="M32 11v6M32 47v6M11 32h6M47 32h6M17.2 17.2l4.2 4.2M42.6 42.6l4.2 4.2M46.8 17.2l-4.2 4.2M21.4 42.6l-4.2 4.2" />
-              </svg>
-              <span className="font-display text-xl font-semibold leading-none">
-                Blickensdörfer
-              </span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Mechanische Werkstatt Blickensdörfer"
+              width={191}
+              height={69}
+              className="h-16 w-auto"
+            />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink/75">
               Präzisionsdreh- und Frästeile aus Hanau. Mechanische Fertigung
               für Feinwerktechnik, Mess- und Labortechnik – seit {site.founded}.

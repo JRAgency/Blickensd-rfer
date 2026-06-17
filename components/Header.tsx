@@ -30,16 +30,26 @@ export default function Header() {
     };
   }, [open]);
 
+  // Seiten mit dunklem Hero hinter dem transparenten Header
+  const hasDarkHero =
+    pathname === "/" ||
+    pathname.startsWith("/leistungen") ||
+    pathname.startsWith("/maschinenpark") ||
+    pathname.startsWith("/unternehmen") ||
+    pathname.startsWith("/kontakt");
+  // Solider Header: gescrollt ODER Seite ohne dunklen Hero (z. B. Impressum)
+  const solid = scrolled || open || !hasDarkHero;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] ${
-        scrolled
+        solid
           ? "border-b border-paper-line bg-paper/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="container-x flex h-[76px] items-center justify-between">
-        <Logo variant="dark" />
+        <Logo variant={solid ? "dark" : "light"} />
 
         <nav className="hidden items-center gap-1 lg:flex">
           {site.nav.map((item) => {
